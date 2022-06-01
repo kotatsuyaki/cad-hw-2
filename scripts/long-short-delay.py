@@ -1,5 +1,4 @@
 from typing import Union
-import pprint
 from dataclasses import dataclass
 
 def to_str(num: int) -> str:

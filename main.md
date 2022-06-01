@@ -77,4 +77,15 @@ Convert the slicing tree to Polish expression.
 1587H6HV4H23VHV
 ```
 
+# 4 (a). Area optimization by hard block rotation
+
+The calculation is shown in the figure below.
+Sizes are written as pairs of $(\text{width}, \text{height})$.
+Sizes for the optimized area case are shown in **bold font**.
+Internal nodes are numbered in an arbitrary order.
+
+![The optimization process](./resources/4a.pdf)
+
+The area of the optimized floorplan is $6\times 7 = 42$.
+
 <!-- vim: set ft=markdown.pandoc colorcolumn=100: -->
