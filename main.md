@@ -1,5 +1,4 @@
 # 1. Calculate slack for each block
-
 The tables below tabluates the process of finding slack for each of block.
 Slack is given in the rows marked as $S(X)$.
 
@@ -53,5 +52,29 @@ Finally we identify the longest and shortest paths.
 
 - Longest path: $S\to F\to B\to C\to D\to M\to E$, path delay $15$.
 - Shortest path: $S\to K\to I\to J\to E$, path delay $7$.
+
+# 3. Normalized Polish expression for the floorplan
+
+Construct the normalized slicing tree.
+Here the tree is presented in an S-expression-like format.
+Left children nodes come before right children nodes.
+
+```txt
+(V (1)
+   (H (H (V (5)
+            (H (H
+               (8)
+               (7))
+            (6)))
+         (4))
+      (V (2)
+         (3))))
+```
+
+Convert the slicing tree to Polish expression.
+
+```txt
+1587H6HV4H23VHV
+```
 
 <!-- vim: set ft=markdown.pandoc colorcolumn=100: -->
