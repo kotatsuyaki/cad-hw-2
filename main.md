@@ -84,8 +84,18 @@ Sizes are written as pairs of $(\text{width}, \text{height})$.
 Sizes for the optimized area case are shown in **bold font**.
 Internal nodes are numbered in an arbitrary order.
 
-![The optimization process](./resources/4a.pdf)
+![The optimization process](./resources/4a-tree.pdf)
 
 The area of the optimized floorplan is $6\times 7 = 42$.
+The floorplan is illustrated below.
+
+![The floorplan](./resources/4a-floorplan.pdf)
+
+# 4 (b). Draw a slicing floorplan that has smaller area than (a)
+
+The area of the following floorplan is $6\times 6 = 36 < 42$.
+
+![The floorplan](./resources/4b-floorplan.pdf)
+
 
 <!-- vim: set ft=markdown.pandoc colorcolumn=100: -->

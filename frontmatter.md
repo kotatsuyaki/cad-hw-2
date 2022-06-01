@@ -8,4 +8,8 @@ date: 2022-06-01
 
 maketitle: true
 colorlinks: true
+
+smallimages:
+  - ./resources/4a-floorplan.pdf
+  - ./resources/4b-floorplan.pdf
 ---
