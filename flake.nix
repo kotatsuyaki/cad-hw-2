@@ -19,7 +19,7 @@
       in
       {
         devShell = pkgs.mkShell {
-          buildInputs = deps;
+          buildInputs = deps ++ (with pkgs; [ pyright python3 ]);
         };
         defaultPackage = pkgs.stdenv.mkDerivation {
           name = "main.pdf";

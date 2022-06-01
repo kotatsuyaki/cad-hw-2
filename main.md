@@ -23,4 +23,35 @@ Slack is given in the rows marked as $S(X)$.
 |$R(X)-D(X)$|4|5|7|9|12|10|11|
 |$S(X)$|-1|3|3|-1|12|3|-1|
 
+# 2. Find longest and shortest delay paths and their delays
+
+First, perform a topological sort on the graph in increasing order.
+
+$$(S), A, F, B, G, K, C, H, L, D, I, N, J, M, E$$
+
+We find the longest and shortest path delays ($A(X)$'s and $a(X)$'s) in the sorted order.
+The node names after the path delays inside parentheses are the chosen predecessor.
+
+|   | $A(X)$                  | $a(X)$               |
+|---|-------------------------|----------------------|
+|$A$|$\max(0) = 0$ (S)        |$\min(0) = 0$ (S)     |
+|$F$|$\max(0) = 0$ (S)        |$\min(0) = 0$ (S)     |
+|$B$|$\max(2,3) = 3$ (F)      |$\min(2,3) = 2$ (A)   |
+|$G$|$\max(3) = 3$ (F)        |$\min(3) = 3$ (F)     |
+|$K$|$\max(2,0) = 2$ (A)      |$\min(2,0) = 0$ (S)   |
+|$C$|$\max(4) = 4$ (B)        |$\min(3) = 3$ (B)     |
+|$H$|$\max(4,4) = 4$ (B)      |$\min(3,4) = 3$ (B)   |
+|$L$|$\max(4,3) = 4$ (G)      |$\min(4,1) = 1$ (K)   |
+|$D$|$\max(8) = 8$ (C)        |$\min(7) = 7$ (C)     |
+|$I$|$\max(8,3) = 8$ (H)      |$\min(7,1) = 1$ (K)   |
+|$N$|$\max(10) = 10$ (D)      |$\min(9) = 9$ (D)     |
+|$J$|$\max(8,11) = 11$ (I)    |$\min(7,4) = 4$ (I)   |
+|$M$|$\max(10,6) = 10$ (D)    |$\min(9,3) = 3$ (L)   |
+|$E$|$\max(13,14,15) = 15$ (M)|$\min(12,7,8) = 7$ (J)|
+
+Finally we identify the longest and shortest paths.
+
+- Longest path: $S\to F\to B\to C\to D\to M\to E$, path delay $15$.
+- Shortest path: $S\to K\to I\to J\to E$, path delay $7$.
+
 <!-- vim: set ft=markdown.pandoc colorcolumn=100: -->
