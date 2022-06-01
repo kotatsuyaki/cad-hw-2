@@ -1,4 +1,5 @@
 # 1. Calculate slack for each block
+
 The tables below tabluates the process of finding slack for each of block.
 Slack is given in the rows marked as $S(X)$.
 
@@ -21,6 +22,7 @@ Slack is given in the rows marked as $S(X)$.
 |$R(X)$|9|10|10|11|15|15|15|
 |$R(X)-D(X)$|4|5|7|9|12|10|11|
 |$S(X)$|-1|3|3|-1|12|3|-1|
+
 
 # 2. Find longest and shortest delay paths and their delays
 
@@ -53,6 +55,7 @@ Finally we identify the longest and shortest paths.
 - Longest path: $S\to F\to B\to C\to D\to M\to E$, path delay $15$.
 - Shortest path: $S\to K\to I\to J\to E$, path delay $7$.
 
+
 # 3. Normalized Polish expression for the floorplan
 
 Construct the normalized slicing tree.
@@ -76,6 +79,7 @@ Convert the slicing tree to Polish expression.
 ```txt
 1587H6HV4H23VHV
 ```
+
 
 # 4 (a). Area optimization by hard block rotation
 
