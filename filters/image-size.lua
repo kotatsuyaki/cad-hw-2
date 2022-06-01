@@ -1,14 +1,14 @@
 local smallimages = {}
 
 local meta_filter = {
-    Meta = function (meta)
+    Meta = function(meta)
         smallimages = meta.smallimages
         return meta
     end,
 }
 
 local image_filter = {
-    Image = function (elem)
+    Image = function(elem)
         local attr = elem.attr
         if smallimages:find_if(function(arr)
             return arr[1].text == elem.src
