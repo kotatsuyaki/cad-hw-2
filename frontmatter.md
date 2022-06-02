@@ -12,4 +12,5 @@ colorlinks: true
 smallimages:
   - ./resources/4a-floorplan.pdf
   - ./resources/4b-floorplan.pdf
+  - ./resources/q6.pdf
 ---

@@ -14,7 +14,7 @@ local image_filter = {
             return arr[1].text == elem.src
         end) then
             print('Setting image to small:', elem.src)
-            attr.attributes['width'] = '25%'
+            attr.attributes['width'] = '33%'
         else
             attr.attributes['width'] = '55%'
         end

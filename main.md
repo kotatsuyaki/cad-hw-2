@@ -6,8 +6,8 @@ Slack is given in the rows marked as $S(X)$.
 ||A|B|C|D|F|G|H|I|
 |---|---|---|---|---|---|---|---|---|
 |$D(X)$|0|0|0|0|1|4|2|1|
-|$A(Y)$ of predecessors|0|0|0|0|0|0;0|1|4|
-|$R(X)-D(X)$ of successors|1;9|-1;12|-1;11|1;12|2;5|3;7|4;7|4;5|
+|$A(Y)$ of predecessors|0|0|0|0|0|0,0|1|4|
+|$R(X)-D(X)$ of successors|1,9|-1,12|-1,11|1,12|2,5|3,7|4,7|4,5|
 |$A(X)$|0|0|0|0|1|4|3|5|
 |$R(X)$|1|-1|-1|1|2|3|4|4|
 |$R(X)-D(X)$|1|-1|-1|1|1|-1|2|3|
@@ -16,7 +16,7 @@ Slack is given in the rows marked as $S(X)$.
 ||J|K|L|M|N|O|P|
 |---|---|---|---|---|---|---|---|
 |$D(X)$|5|2|3|2|3|5|4|
-|$A(Y)$ of predecessors|3;5|1;5|4;3|0;10|0;0|7;7|0;12|
+|$A(Y)$ of predecessors|3,5|1,5|4,3|0,10|0,0|7,7|0,12|
 |$R(X)-D(X)$ of successors|9|10|10|11|15|15|15|
 |$A(X)$|10|7|7|12|3|12|16|
 |$R(X)$|9|10|10|11|15|15|15|
@@ -130,5 +130,17 @@ The sum of rectilinear edge lengths is $4 + 3 + 5 + 5 = 17$.
 
 $(4 + 8 + 9 + 3 + 4 + 10 + 11 + 5 + 8 + 10 + 5 + 5 + 9 + 11 + 5 + 6 + 3 + 5 + 5 + 6) \times 2 / 5 = 52.8$
 
+
+# 6. Force-directed placement
+
+Let the origin be at the bottom-left corner (i.e. the position of Vdd).
+Let the $x$ axis be pointing to the right, and let the $y$ axis be pointing upwards.
+
+$$\hat{x} = \frac{0\times3 + 5\times5 + 0\times6 + 0\times6 + 5\times5} {3+5+6+6+5} = 2$$
+$$\hat{y} = \frac{0\times3 + 5\times5 + 5\times6 + 4\times6 + 0\times5} {3+5+6+6+5} = 3.16$$
+
+Therefore, the zero-force location of the gate is at $(2, 3.16)$.
+
+![Zero-force location for the AND gate](./resources/q6.pdf)
 
 <!-- vim: set ft=markdown.pandoc colorcolumn=100: -->
