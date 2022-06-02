@@ -102,4 +102,33 @@ The area of the following floorplan is $6\times 6 = 36 < 42$.
 ![The floorplan](./resources/4b-floorplan.pdf)
 
 
+# 5. Wirelength estimation
+
+## a. Semi-perimeter method
+
+The bounding box is from $(2, 1)$ to $(9, 8)$.
+Therefore, the semi-perimeter is $(9 - 2) + (8 - 1) = 14$.
+
+## b. Steiner-tree approximation
+
+The Steiner point is $p_s = (6, 3)$.
+The tree is described with these edges.
+
+$$E' = \{ (p_1, p_2), (p_1, p_5), (p_3, p_s), (p_4, p_s), (p_5, p_s) \}$$
+
+The sum of rectilinear edge lengths is $4 + 3 + 2 + 3 + 3 = 15$.
+
+## c. Minimum spanning tree
+
+The minimum spanning tree of the question is described with these edges.
+
+$$E' = \{ (p_1, p_2), (p_1, p_5), (p_3, p_4), (p_3, p_5) \}$$
+
+The sum of rectilinear edge lengths is $4 + 3 + 5 + 5 = 17$.
+
+## d. Complete graph
+
+$(4 + 8 + 9 + 3 + 4 + 10 + 11 + 5 + 8 + 10 + 5 + 5 + 9 + 11 + 5 + 6 + 3 + 5 + 5 + 6) \times 2 / 5 = 52.8$
+
+
 <!-- vim: set ft=markdown.pandoc colorcolumn=100: -->
